@@ -1,0 +1,703 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+body {
+    font-family: "Segoe UI Semilight","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif !important;
+}
+
+.text-left{
+	text-align:left !important;
+}
+body {
+    font-family: "Segoe UI Semilight","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif !important;  
+}
+h3 {
+    font-weight: 400;
+}
+button:focus {
+    outline: none !important;   
+}
+label {
+    font-weight: 500;
+}
+.panel-head {
+    color: #1b1b1b;
+    padding: 8px 15px;
+    background-color: #ffffff;
+}
+.panel-head-text {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.trebox{
+  padding:0;
+  margin:0;
+}
+
+.trebox,
+.trebox ul{
+ list-style-type:none; 
+}  
+
+.trebox li, .trebox ul li {
+    position: relative;
+    padding: 20px 0 0;
+} 
+
+.trebox li:last-child::after{
+  display:none;
+}
+
+.trebox li::after {
+    content: '';
+    bottom: 0;
+    left: -10px;
+    width: 8px;
+    height: 100%;
+    border-left: 1px solid #403c3c;
+    position: absolute;
+    display: inline-block;
+}
+
+.trebox ul{
+ margin:0;
+ padding-left:130px;
+}
+
+.cover_drg.container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.trebox,
+.total_tree{
+ margin:0 auto !important;	
+}
+
+.detail_bxsec {
+    width: 200px;
+    min-height: 60px;
+    display: inline-block;
+    border: 1px solid #7c7c7c;
+    border-radius: 5px;
+    background:#f5f5f5;
+    z-index: 5;
+    position: relative;
+}
+
+.trebox li .detail_bxsec::before {
+    content: '';
+    left: -30px;
+    top: 40px;
+    width: 30px;
+    border-top: 1px solid #7c7c7c;
+    height: 1px;
+    position: absolute;
+}
+
+.trebox li::after {
+    content: '';
+    bottom: 0;
+    left: -30px;
+    width: 8px;
+    height: 100%;
+    border-left: 1px solid #7c7c7c;
+    position: absolute;
+    display: inline-block;
+}
+
+.trebox li::before {
+    content: '';
+    top: 0;
+    left: -30px;
+    width: 8px;
+    height: 62px;
+    border-left: 1px solid #7c7c7c;
+    position: absolute;
+    display: inline-block;
+}
+
+.trebox>li:first-child::before{
+ display:none;
+}
+
+.trebox>li:first-child>.detail_bxsec::before{
+
+  display:none;
+
+}
+
+span.triggerbtn {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #7c7c7c;
+    display: block;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 17px !important;
+    color: #636060;
+    position: absolute;
+    left: calc(50% - 10px);
+    bottom: -10px;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 400;
+    z-index:50;
+}
+
+.imgviewbx {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    border-radius: 50%;
+    margin: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 3px #9accff;
+}
+.imgviewbx img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail_inside{
+
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+-webkit-align-items: center;
+-ms-flex-align: center;
+align-items: center;
+min-height:80px;
+
+}
+
+.userdetail_show {
+    padding: 3px 5px 10px 5px;
+    text-align:left;
+}
+
+.userdetail_show h3{
+font-size: 12px;
+color: #1d6ebf;
+line-height: 1.5;
+margin: 0px;
+font-weight: 600;
+letter-spacing: 0.2px;
+
+}
+
+.userdetail_show h3.company_names{
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+}
+
+.userdetail_show a.emil_ids{
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+max-width:145px;
+}
+
+.userdetail_show h3.company_employee{
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+}
+
+
+h5.designation,
+h5.dept{
+    color: #4f4f4f !important;
+    font-size: 11px;
+    margin: 3px 0 0;
+    letter-spacing:0.3px;
+}
+
+.userdetail_show label {
+    font-size: 12px;
+    font-weight: 400 !important;
+    display: inline-block;
+    margin: 0px 3px 0 0 !important;
+    margin-bottom: 0 !important;
+    letter-spacing:0.3px;
+}
+h5.dept{
+    display: inline-block;
+    margin-top:0;
+  }
+
+a.emil_ids {
+    font-size: 10px;
+    color: #1d6ebf;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+.trebox{
+  display:inline-block;
+}
+
+.trebox ul li .detail_bxsec:only-child .triggerbtn{
+   display:none;
+}
+
+/****navarea******/
+.get-org-chart .get-oc-tb a{
+    float: right;
+    width: auto !important;
+    height: auto !important;
+    text-decoration: none;
+    border: 0;
+    color: #333333 !important;
+    font-size: 13px !important;
+    padding: 3px 7px;
+    margin: 0 2px;
+    transition: 0.1s;
+    border: 1px solid transparent;
+    min-height: 30px;
+}
+
+.get-org-chart .get-oc-tb button img,
+.get-org-chart .get-oc-tb a img {
+    max-width: 20px;
+    opacity: 0.8;
+}
+.get-org-chart .get-oc-tb a.horizontal_tab img{
+  max-width:24px !important;
+}
+
+.get-org-chart .get-oc-tb button,
+.get-org-chart .get-oc-tb a.get-plus,
+.get-org-chart .get-oc-tb a.get-minus{
+    background: transparent !important;
+    border-radius: 4px;
+    border: 1px solid #146dc6;
+    box-shadow: 4px 4px 4px -4px #1551ab;
+    float: right;
+    background-size: 80%;
+    margin: 11px 5px 0 3px;
+    border: 0;
+    transition: .2s;
+    border:1px solid transparent;
+    font-size:13px;
+    height:30px;
+}
+.get-org-chart .get-oc-tb button {
+    box-shadow: none;
+    padding: 3px 7px;
+    width: auto;
+    min-width: auto;
+    color: #333;
+}
+.get-org-chart .get-oc-tb button img{
+ 	
+}
+
+.get-org-chart .get-oc-tb button:hover,
+.get-org-chart .get-oc-tb a.active,
+.get-org-chart .get-oc-tb a:hover {
+    background: #efefef !important;
+    border:1px solid #98d6d8 !important;
+}
+
+span[class^="cirle_box"],
+.cirle_box2, .cirle_box {
+    padding: 2px 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    float: left;
+    margin: 11px 10px 0 3px;
+    max-width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.get-oc-tb-item1{
+ overflow:visible !important;	
+}
+.get-org-chart .get-oc-tb{
+ overflow:visible !important;	
+}
+
+.company_employee{
+ cursor:pointer;	
+}
+
+@media(min-width:1300px){
+
+.get-org-chart .get-oc-c {
+    Top: 85px !Important;
+}
+	
+}
+
+
+
+@media(max-width:1300px){
+
+.get-org-chart .get-oc-tb button, 
+.get-org-chart .get-oc-tb a.get-plus, 
+.get-org-chart .get-oc-tb a.get-minus {
+    margin: 11px 2px 0 2px;
+    font-size:12px;
+    min-height: 30px;
+    padding:2px 4px;
+}
+.cirle_box2, .cirle_box {
+    padding: 2px 7px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    float: left;
+    margin: 11px 3px 0 3px;
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.get-org-chart .get-oc-tb input {
+    width: 135px !important;
+    height: 30px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+	
+}
+
+@media(min-width: 1000px) and (max-width: 1299px){
+
+.get-org-chart .get-oc-c {
+    width: 90% !important;
+    height: 65vh !important;
+    left: 15px !Important;
+    Top: 75px !Important;
+}
+	
+}
+
+
+@media(min-width: 768px) and (max-width: 999px){
+	
+.get-org-chart .get-oc-c {
+    width: 90% !important;
+    height: 63vh !important;
+    left: 15px !Important;
+    Top: 110px !Important;
+}
+
+}
+
+@media(min-width: 500px) and (max-width: 767px){
+
+.get-org-chart .get-oc-c {
+    width: 90% !important;
+    height: 62vh !important;
+    left: 15px !Important;
+    Top: 110px !Important;
+}
+	
+}
+
+
+@media(max-width:499px){
+
+.cirle_box2, .cirle_box {
+    padding: 2px 7px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    float: left;
+    margin: 11px 3px 0 3px;
+    max-width: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+}
+.get-org-chart .get-oc-c {
+    width: 90% !important;
+    height: 60vh !important;
+    left: 15px !Important;
+    Top: 145px !Important;
+}
+.get-org-chart .get-oc-tb input {
+    width: 120px !important;
+    height: 30px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+	
+}
+
+
+
+
+/****vertial tab settings*******/
+
+.top_panes{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	
+	-webkit-box-pack: space-between;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack:space-between;
+	justify-content:space-between;
+	-webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+	
+}
+
+.event_btns a {
+    background: transparent !important;
+    border-radius: 4px;
+    border: 1px solid #146dc6;
+    background-size: 80%;
+    margin: 11px 5px 0 3px;
+    border: 0;
+    transition: .2s;
+    border: 1px solid transparent;
+    font-size: 13px;
+    height: 30px;
+    color: #333;
+    padding: 3px 7px;
+    min-height: 30px;
+    margin: 11px 5px 0 3px;
+    display: inline-block;
+    cursor:pointer;
+}
+
+.only_verticalsearch {
+    width: 180px;
+    height: 30px;
+    margin:8px 10px 0 8px;
+    padding:6px 12px;
+}
+
+.event_btns a img{
+ max-width:20px;	
+}
+.event_btns a:hover {
+    background: #efefef !important;
+    border: 1px solid #98d6d8 !important;
+}
+
+.cover_drg{
+ position:relative;	
+}
+
+.cover_drg.container {
+    overflow:auto;
+    min-height: 66vh;
+    max-height: 66vh;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border:1px solid #ccc;
+    scroll-behavior: smooth;
+    background:#fff;
+}
+
+
+.cover_drg.container::-webkit-scrollbar-thumb {
+border: 2px solid transparent;
+border-radius: 10px;
+background-color:#b6b6b6;
+background-clip: content-box;
+-webkit-background-clip: content-box;
+
+}
+
+
+.cover_drg.container::-webkit-scrollbar-thumb:hover {
+background-color:#949292;
+background-clip: border-box;
+-webkit-background-clip: border-box;
+
+}
+
+.cover_drg.container::-webkit-scrollbar {
+width: 8px;
+height: 8px;
+background-color: transparent;
+}
+
+
+.trebox,
+.total_tree{
+ transform:scale(0.9);
+  -webkit-transform:scale(0.9);
+  -o-transform:scale(0.9);
+  -ms-transform:scale(0.9);
+  transform-origin:top center;
+  top:15px;	
+}
+
+.cover_drg.container{
+ text-align:center;	
+}
+
+.cover_drg.container .trebox{
+ text-align:left;
+ transition:transform 0.4s cubic-bezier(0, 0.79, 0, 1.54) 	
+}
+
+.trebox>li:first-child {
+    padding-top: 0;
+}
+
+
+
+
+@media(min-width: 992px){
+
+#orgniation-filter .modal-dialog{
+ width:50%;	
+}
+	
+}
+
+
+/******horizontal tree********/
+.tree{
+transition:transform 0.4s cubic-bezier(0, 0.79, 0, 1.54);
+ transform: scale(0.78);
+-webkit-transform: scale(0.78);
+-o-transform: scale(0.78);
+-ms-transform: scale(0.78);
+transform-origin: top center; 
+}
+
+.tree ul {
+  padding:30px 0 0 0; 
+  position: relative;
+ display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+margin:0 auto;
+}
+
+.tree li {
+  float: left; text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding:20px 15px 0 15px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+.tree ul li .covernows:only-child .triggerbtn {
+    display: none;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.tree li::before, .tree li::after{
+  content: '';
+  position: absolute; top: 0; right: 50%;
+  border-top: 2px solid #bdbdbd;
+  width: 50%; height: 20px;
+}
+.tree li::after{
+  right: auto; left: 50%;
+  border-left: 2px solid #bdbdbd;
+}
+
+/*We need to remove left-right connectors from elements without 
+any siblings*/
+.tree li:only-child::after, .tree li:only-child::before {
+  display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree li:only-child{ padding:0;}
+
+/*Remove left connector from first child and 
+right connector from last child*/
+.tree li:first-child::before, .tree li:last-child::after{
+  border: 0 none;
+}
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before{
+  border-right: 2px solid #bdbdbd;
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before{
+  content: '';
+  position: absolute; top: 0; left: 50%;
+  border-left: 2px solid #ccc;
+  width: 0; height: 30px;
+}
+
+.tree li div.covernows {
+    border:1px solid #7c7c7c;
+    padding: 0;
+    text-decoration: none;
+    color: #666;
+    font-size: 11px;
+    display: inline-block;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    width:240px;
+    min-height: 80px;
+    background: #f5f5f5;
+    position: relative;
+   
+}
+
+/*Connector styles on hover*/
+.tree li div.covernows:hover+ul li::after, 
+.tree li div.covernows:hover+ul li::before, 
+.tree li div.covernows:hover+ul::before, 
+.tree li div.covernows:hover+ul ul::before{
+  border-color:  #94a0b4;
+}
+
+
+.tree{
+display: -webkit-box;
+display: -moz-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+clear:both;
+}
+
+
+/*****horizontal********/
+
+

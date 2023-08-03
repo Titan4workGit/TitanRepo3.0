@@ -1,0 +1,817 @@
+<link href="https://cdn.jsdelivr.net/gh/Titan4workGit/TitanRepo3.0@latest/_catalogs/masterpage/Titan2/Styles/getorgchart.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/gh/Titan4workGit/TitanRepo3.0@latest/SiteAssets/OrganizationChart/css/org_style.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/gh/Titan4workGit/TitanRepo3.0@latest/SiteAssets/OrganizationChart/getorgchart.js"></script>
+
+<style type="text/css">
+
+body {
+    font-family: "Segoe UI Semilight","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif !important;
+}
+div.ms-webpart-cell-vertical-inline-table, 
+.ms-webpart-chrome-vertical{
+    display: block !important;
+}
+
+.ms-webpart-zone,
+.ms-webpart-cell-horizontal{
+   display: block !important;
+}
+
+
+#people {
+    width: 100% !important;
+    height: 600px !important;
+}
+    
+#people a[title~="Titan"]{
+	transform:rotateY(90deg) !important;
+	-moz-transform:rotateY(90deg) !important;
+    -webkit-transform:rotateY(90deg) !important;
+	-ms-transform:rotateY(90deg) !important;
+	-o-transform:rotateY(90deg) !important;
+} 
+    
+
+    #OfficeLocation {
+        margin-top: 8px;
+        margin-bottom: 5px;
+        height: 30px;
+        border: none;
+    }
+
+    #Department {
+        margin-top: 8px;
+        margin-bottom: 5px;
+        height: 30px;
+        border: none;
+    }
+
+    .get-org-chart .get-oc-tb {
+        border-bottom: none !important;
+    }
+
+        .get-org-chart .get-oc-tb input {
+            width: 200px;
+            height: 30px;
+        }
+
+
+    .get-org-chart .get-box {
+        fill: #f5f5f5 !important;
+        stroke-width: 3px !important;
+        stroke: #7c7c7c !important;
+    }
+
+    .get-org-chart .get-text {
+        fill: #7c7c7c !important;
+    }
+
+        .get-org-chart .get-text.get-text-3 {
+            fill: #516fc7 !important;
+            stroke-width: 5px !important;
+            cursor: pointer;
+        }
+
+    #people .get-org-chart .get-oc-tb {
+        background-color: transparent !important;
+    }
+
+    #Department,
+    #OfficeLocation {
+        border: 1px solid #b5b5b5;
+        padding: 5px;
+    }
+
+    ol.breadcrumb li h4 {
+        color: #353535 !important;
+        font-size: 20px !important;
+    }
+
+    .get-org-chart .get-up {
+        width: 50px !important;
+        -webkit-border-radius: 30px 30px 0 0;
+        background-color: #3c3b3be0 !important;
+    }
+
+    .get-org-chart .get-down {
+        width: 50px !important;
+        border-radius: 0 0 30px 30px;
+        -webkit-border-radius: 0 0 30px 30px;
+        height: 30px !important;
+        background-color: #3c3b3be0 !important;
+    }
+
+    .get-org-chart .get-left {
+        width: 30px !important;
+        border-radius: 30px 0 0 30px;
+        -webkit-border-radius: 30px 0 0 30px;
+        height: 50px !important;
+        background-color: #3c3b3be0 !important;
+    }
+
+    .get-org-chart .get-right {
+        width: 30px !important;
+        border-radius: 0 30px 30px 0;
+        -webkit-border-radius: 0 30px 30px 0;
+        height: 50px !important;
+        background-color: #3c3b3be0 !important;
+    }
+
+    button.close {
+        min-width: 1em !important;
+        background: #fff !important;
+        color: #353232 !important;
+        line-height: 24px;
+    }
+
+    button.new_manage {
+        background: #1D6EBF;
+        border-radius: 4px;
+        display: inline;
+        box-shadow: 4px 4px 4px -4px #1551ab;
+        border-color: #0a549d;
+        color: #fff;
+        border-color: #0a549d;
+        padding: 3px 4px;
+        box-shadow: inset 0 1px 1px #72b9ff;
+        transition: .1s;
+    }
+
+        button.new_manage:hover {
+            background: #4a9aec;
+        }
+
+    #ParentPplManager {
+        margin: 8px 0;
+    }
+
+    #spnPplManager .sp-peoplepicker-topLevel {
+        width: 100% !important;
+        padding: 5px 5px !important;
+    }
+
+        #spnPplManager .sp-peoplepicker-topLevel .sp-peoplepicker-editorInput {
+            max-width: 100% !important;
+            border: none !important;
+        }
+
+    #OfficeLocation {
+        width: 100% !important;
+        margin: 8px auto !important;
+    }
+    
+.get-org-chart .get-text {
+    fill: #4f4f4f !important;
+}    
+
+.get-text.get-text-0{
+
+	fill: #1d6ebf !important;
+	stroke-width: 2 !important;
+	font-weight: 600;
+	cursor: pointer;
+
+}
+
+#people image{
+ cursor:pointer;		
+}
+
+.hiajust{
+  height:30px;	
+  margin:8px 0;
+}
+ 
+svg.hoverfect{
+
+ -webkit-filter: drop-shadow( 3px 6px 2px rgb(30, 144, 255,0.1));
+  filter: drop-shadow( 3px 6px 2px rgb(30, 144, 255,0.1));	
+}
+
+svg.hoverfect:hover{
+
+ -webkit-filter: drop-shadow( 3px 6px 4px rgb(30, 144, 255,0.2));
+  filter: drop-shadow( 3px 6px 4px rgb(30, 144, 255,0.2));	
+
+}
+
+/**july-1-22-***/
+
+
+#s4-workspace{
+ height:calc(100vh - 34px) !important;
+ min-height:calc(100vh - 34px) !important;  
+}
+
+button.filter_ajst{
+ box-shadow:none !important;
+ border-radius:3px !important;
+ border: 1px solid #fff !important;
+}
+button.filter_ajst:hover {
+border: 1px solid #1d6ebf !important;
+color: #333 !important;
+background:transparent !important;
+}
+
+.get-oc-tb a.get-plus,
+.get-oc-tb a.get-minus{
+    border: 1px solid #146dc6;
+    box-shadow:none !important;
+    border-radius:3px !important;    
+}
+
+.get-org-chart .get-oc-tb a.get-plus:hover {
+    transform: scale(1) !important;
+}
+.get-org-chart .get-oc-tb a.get-minus:hover {
+    transform: scale(1) !important;
+}
+
+#people {
+    width: 100% !important;
+    height: 77vh !important;
+}
+
+.get-org-chart .get-down{
+  bottom:-10px;	
+}
+
+
+.get-org-chart .get-oc-c {
+    width: calc(98% - 5px) !important;
+    border:1px solid #ccc;
+}
+.top_panes{
+ background: transparent !important;	
+}
+
+.get-up,
+.get-down,
+.get-left,
+.get-right{
+ display:none !important;
+ visibility:hidden !important;
+ background:transparent !important;	
+}
+
+.get-box.bgchange{
+ fill:#cef2c0 !important;	
+}
+
+/*******total treebox************/
+.total_tree ul,
+.total_tree{
+ margin:0;
+ padding:0;
+ list-style-type: none;
+ transition: 0.2s ease;
+}
+.total_tree>li{
+  text-align: center;
+}
+.total_tree ul{
+    display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+
+    justify-content: center;
+   -webkit-box-pack: center;
+    -webkit-justify-content:center;
+    -ms-flex-pack: center;
+    margin: 0;
+    padding: 15px 0 0 0;
+    position:relative;
+ 
+}
+
+.total_tree ul::before{
+ content:'';
+ position:absolute;
+ width:1px;
+ height:30px;
+ background-color:#7c7c7c;
+ display:block;
+ top:-15px;
+ left:50%;
+}
+
+.total_tree>li>ul li{
+  padding-top:15px;
+
+}
+.total_tree ul li{
+  position:relative;
+}
+
+.total_tree ul li::before,
+.total_tree ul li::after{
+ content:'';
+ position:absolute;
+ width:50%;
+ height:15px;
+ border-top:1px solid #7c7c7c;
+ display:block;
+ top:0;
+ left:0;
+}
+
+.total_tree ul li:first-child::before,
+.total_tree ul li:last-child::after{
+ border-top:transparent;
+}
+
+.total_tree ul li::after{
+ border-left:1px solid #7c7c7c;
+}
+
+.total_tree ul li::after{
+ left:50%;   
+}
+
+.badybox{
+    border: 1px solid #7c7c7c;
+    padding: 0;
+    text-decoration: none;
+    color: #666;
+    font-size: 11px;
+    display: inline-block;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    width: 200px;
+    min-height: 60px;
+    background: #f5f5f5;
+    position: relative;
+    margin:0 10px;
+    z-index: 5;
+}
+
+
+.total_tree li .badybox:only-child .triggerbtn{
+   display:none;
+}
+
+span.triggerbtn {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #7c7c7c;
+    display: block;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 17px !important;
+    color: #636060;
+    position: absolute;
+    left: calc(50% - 10px);
+    bottom: -10px;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 400;
+    z-index: 50;
+}
+
+.detail_inside {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 60px;
+}
+
+.userdetail_show h3.company_employee {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+h5.designation, h5.dept {
+    color: #4f4f4f !important;
+    font-size: 10px;
+    margin:1px 0 0;
+    letter-spacing: 0.3px;
+}
+.userdetail_show label {
+    font-size: 10px;
+    font-weight: 400 !important;
+    display: inline-block;
+    margin: 0px 3px 0 0 !important;
+    margin-bottom: 0 !important;
+    letter-spacing: 0.3px;
+}
+
+h5.dept {
+    display: inline-block;
+    margin-top: 0;
+    width: 104px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+}
+
+.userdetail_show a.emil_ids {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    max-width: 132px;
+}
+.imgviewbx {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    margin:2px 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 3px #9accff;
+}
+.imgviewbx img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.userdetail_show h3 {
+    font-size: 10px;
+    color: #1d6ebf;
+    line-height: 1.5;
+    margin: 0px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.userdetail_show {
+    padding: 3px 5px 10px 5px;
+    text-align: left;
+}
+
+
+/*******total treebox ed************/
+
+
+@media(max-width: 2000px) and (min-width: 1441px){
+.get-org-chart .get-oc-c {
+    height: 70vh !important;
+}
+}
+
+@media(max-width: 1440px) and (min-width: 1366px){
+.get-org-chart .get-oc-c {
+    height: 68vh !important;
+}
+
+}
+
+@media(max-width: 1365px) and (min-width: 1281px){
+.get-org-chart .get-oc-c {
+    height: 65vh !important;
+}
+}
+
+@media(max-width:767px){
+ 
+.get-org-chart .get-oc-tb{
+ overflow:visible !important;	
+}
+.get-org-chart .get-oc-tb>div>div{
+ overflow:visible !important;	
+}
+
+.get-org-chart .get-oc-c > svg{
+ 	top:45px !important;
+}
+
+	
+}
+
+@media(max-width:500px){
+ 
+.get-org-chart .get-oc-c > svg{
+ 	top:60px !important;
+}
+	
+}
+
+
+/**Aug-5-21**/
+
+body::-webkit-scrollbar {
+   width: 8px;
+   background-color: #F5F5F5;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
+}
+ 
+body::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #999;
+}
+   
+</style>
+
+<div class="row department-header">
+    <ol class="breadcrumb">
+        <li><h4><b>Organization Chart</b></h4></li>
+    </ol>
+</div>
+
+<!--<div class="row department-header">
+    <ol class="breadcrumb">
+        <li><h4><b>Organization Chart</b></h4></li>
+    </ol>
+</div>
+<div id="orgChartBreadCrumb"><h4><a style="cursor:pointer;">Home</a> / Organization Chart</h4></div> -->
+<!--<button type="button" class="new_manage" data-toggle="modal" data-target="#orgniation-filter">Filter</button>-->
+<!--<div>Showing <span id="DiplayEmpCount">100</span> out of <span id="TotalEmpCount">0</span>&nbsp;employees</div>-->
+
+<div class="tab-content">
+    <!--<div id="SearchByLocation">
+	</div>
+	<input id="locationID" type="hidden">
+	<div id="people" class="horizontal_tab tab-pane fade"></div>-->
+	
+    <div class="top_panes">
+    <div class="capsuls">
+     <span class="cirle_box" id="spanDepartment"></span>
+     <span class="cirle_box2" id="spaneLocation"></span>
+     <span class="cirle_box3" id="spaneCompany"></span>
+     <input type="search" id="only_verticalsearch" style="display:none" class="only_verticalsearch" onkeyup="search_V_Employee()" placeholder="Search">
+     <input type="search" id="only_Hori_search" class="only_verticalsearch" onkeyup="search_H_Employee()" placeholder="Search">
+    </div>
+   	<div class="event_btns">
+   	<a data-toggle="tab" href="#horinewtab" class="horizontal_tab active">
+      <img src="https://cdn.jsdelivr.net/gh/Titan4workGit/TitanRepo3.0@latest/SiteAssets/OrganizationChart/img/horizontal_icon.png" style="width:20px;"> Horizontal
+    </a>
+    <a data-toggle="tab" href="#vertiacal_tab" class="vertiacal_tab">
+      <img src="https://cdn.jsdelivr.net/gh/Titan4workGit/TitanRepo3.0@latest/SiteAssets/OrganizationChart/img/vertial_icon.png" style="opacity:0.8; width:19px;"> Vertical
+    </a>
+     <a href="#"  data-toggle="modal" data-target="#orgniation-filter">
+      <img src="https://cdn.jsdelivr.net/gh/Titan4workGit/TitanRepo3.0@latest/SiteAssets/OrganizationChart/img/filter-icon.png" style="width:18px; opacity:0.6"> Filter
+    </a>
+     <a href="#" class="zoomIn">
+      <img src="https://cdn.jsdelivr.net/gh/Titan4workGit/TitanRepo3.0@latest/SiteAssets/OrganizationChart/img/zoom.png" style="width:20px; opacity:0.9"> Zoom In
+    </a>
+    <a href="#" class="zoomOut">
+      <img src="https://cdn.jsdelivr.net/gh/Titan4workGit/TitanRepo3.0@latest/SiteAssets/OrganizationChart/img/zoom_out.png" style="width:20px; opacity:0.9"> Zoom Out
+    </a>
+
+    <a data-toggle="tab" href="javascript:void(0)">
+      <img src="https://cdn.jsdelivr.net/gh/Titan4workGit/TitanRepo3.0@latest/SiteAssets/OrganizationChart/img/pdf.png"> PDF
+    </a>
+   	</div>  
+   </div><!---top_panels--->
+    <div id="horinewtab" class="horizontal_tab tab-pane fade in active">
+    	<div class="cover_drg container">
+    	 <ul class="total_tree" id="h">
+			    <li>
+			      <div class="badybox">
+	                <div class="detail_inside">
+		              <div class="imgviewbx">
+		                <img src="" id="Hori_Logo" alt="">
+		              </div>
+		              <div class="userdetail_show">
+		                <h3 class="company_names" id="Hori_Company_Name"></h3>
+		              </div>
+	            	</div>
+				   <span class="triggerbtn" style="font-size: 16px; line-height: 17px;">-</span>
+	              </div>
+			      <ul id="horizontal-ParentUlManager">
+			        <li>
+			          <div class="badybox">
+			            <div class="detail_inside">
+			              <div class="imgviewbx">
+			                <img src="ma.jpg" alt="" data-themekey="#">
+			              </div>
+			              <div class="userdetail_show">
+			                <h3 class="company_employee">Sunil Kumar</h3>
+			                <h5 class="designation">dev</h5>
+			                <label>Dept:</label>
+			                <h5 class="dept">IT</h5><a href="#" class="emil_ids">Sunil.Kumar@titan4work.com</a>
+			              </div>
+			            </div>
+			            <span class="triggerbtn">-</span>
+			          </div>
+			          <ul>
+			            <li>
+			              <div class="badybox">
+			                <div class="detail_inside">
+				              <div class="imgviewbx">
+				                <img src="ma.jpg" alt="" data-themekey="#">
+				              </div>
+				              <div class="userdetail_show">
+				                <h3 class="company_employee">Sunil Kumar 2</h3>
+				                <h5 class="designation">dev</h5>
+				                <label>Dept:</label>
+				                <h5 class="dept">IT</h5><a href="#" class="emil_ids">Sunil.Kumar@titan4work.com</a>
+				              </div>
+			            	</div>
+						   <span class="triggerbtn" style="font-size: 16px; line-height: 17px;">-</span>
+			              </div>
+			              <ul>
+			              	<li>
+				              	<div class="badybox">
+				                <div class="detail_inside">
+					              <div class="imgviewbx">
+					                <img src="ma.jpg" alt="" data-themekey="#">
+					              </div>
+					              <div class="userdetail_show">
+					                <h3 class="company_employee">Sunil Kumar 2</h3>
+					                <h5 class="designation">dev</h5>
+					                <label>Dept:</label>
+					                <h5 class="dept">IT</h5><a href="#" class="emil_ids">Sunil.Kumar@titan4work.com</a>
+					              </div>
+				            	</div>
+							   <span class="triggerbtn" style="font-size: 16px; line-height: 17px;">-</span>
+				              </div>
+			              	</li>
+			              	<li>
+				              	<div class="badybox">
+				                <div class="detail_inside">
+					              <div class="imgviewbx">
+					                <img src="ma.jpg" alt="" data-themekey="#">
+					              </div>
+					              <div class="userdetail_show">
+					                <h3 class="company_employee">Sunil Kumar 2</h3>
+					                <h5 class="designation">dev</h5>
+					                <label>Dept:</label>
+					                <h5 class="dept">IT</h5><a href="#" class="emil_ids">Sunil.Kumar@titan4work.com</a>
+					              </div>
+				            	</div>
+							   <span class="triggerbtn" style="font-size: 16px; line-height: 17px;">-</span>
+				              </div>
+			              	</li>
+			              </ul>
+			            </li>
+			            <li>
+			              <div class="badybox">
+			                <div class="detail_inside">
+				              <div class="imgviewbx">
+				                <img src="ma.jpg" alt="" data-themekey="#">
+				              </div>
+				              <div class="userdetail_show">
+				                <h3 class="company_employee">Sunil Kumar</h3>
+				                <h5 class="designation">dev</h5>
+				                <label>Dept:</label>
+				                <h5 class="dept">IT</h5><a href="#" class="emil_ids">Sunil.Kumar@titan4work.com</a>
+				              </div>
+			            	</div>
+						   <span class="triggerbtn" style="font-size: 16px; line-height: 17px;">-</span>
+			              </div>
+			            </li>
+			          </ul>
+			        </li>
+			        <li>
+			          <div class="badybox">Child</div>
+			        </li>
+			      </ul>
+			    </li>
+			  </ul>
+		</div>	
+    </div><!---new tab---->
+  <div id="vertiacal_tab" class="vertiacal_tab tab-pane fade">
+   <div class="cover_drg container">
+    <ul class="trebox" id="zoomme">
+      <li>
+          <div class="detail_bxsec">
+            <div class="detail_inside">
+              <div class="imgviewbx">
+                <img src="" id="imgCompanyLogo" alt="">
+              </div>
+              <div class="userdetail_show">
+                <h3 class="company_names" id="varticalCompanyName"></h3>
+              </div> 
+            </div>
+            <span class="triggerbtn">-</span>
+          </div>
+		 <ul id="ParentUlManager">
+            
+         </ul>
+      </li>
+    </ul>
+    </div>
+  </div>
+  <!-----vertiacal_tab ed--->
+</div><!---both tabs---->
+
+<div style="clear:both"></div>
+
+<!---modal section--->
+<div class="modal fade" id="orgniation-filter" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <button type="button" class="close close-round" data-dismiss="modal"><span class="close-icon">&times;</span></button>
+                <h4 class="modal-title">Filter</h4>
+            </div>
+            <div class="modal-body project-inbox-istab">
+                <div class="row">
+                
+                     <div class="col-sm-6">
+                        <div class="form-group custom-form-group">
+                            <label for="Project">Company:</label>
+                            <select class="form-control hiajust" id="ddlFilterCompany">
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div class="col-sm-6">
+                        <div class="form-group custom-form-group">
+                            <label for="Project">Department:</label>
+                            <select class="form-control" id="Department"></select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group custom-form-group">
+                            <label for="Project">Location:</label>
+                            <select class="form-control" id="OfficeLocation"></select>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group custom-form-group">
+                            <label for="Project">Manager:</label>
+                            <div id="ParentPplManager">
+                                <span id="spnPplManager"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!--row ed-->
+            </div>
+            <div class="modal-footer project-modal-footer" style="text-align:center;">
+                <button type="button" class="btn custom-btn mr-8" id="btnApply">Apply</button>
+                <button type="button" class="btn custom-btn-two-cancel" id="btnClear">Clear</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <div style="margin:15px 70px; float:right; font-weight:600; font-size:14px;">Showing <span id="DiplayEmpCount">100</span> out of <span id="TotalEmpCount">0</span>&nbsp;employees</div> -->
+
+<!-- <script type="text/javascript">
+    $(window).load(function() {
+        $("#people .get-org-chart a[title='Adapt Titan']").attr('style', 'background-color: #e00 !important');
+    });
+</script> -->
+
+
+
+<script type="text/javascript">
+  
+$(function(){
+
+	$('.covernows .triggerbtn').on('click', function(){
+	 $(this).parent('.covernows, .badybox').next('ul').slideToggle(100);
+	});
+	
+	$('.badybox .triggerbtn').on('click', function(){
+	 $(this).parent('.badybox').next('ul').slideToggle(100);
+	});
+	
+	/*$('.total_tree li ul li ul').each(function(){
+	$(this).addClass('lengthmang');
+    $(this).find('ul').addClass('drag');
+    $(this).find('.triggerbtn').addClass('drag');
+  });*/
+  
+});
+
+</script>
+
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Titan4workGit/TitanRepo3.0@latest/SiteAssets/OrganizationChart/Organization.js"></script>
+    <!--[if gte mso 9]><xml>
+    <mso:CustomDocumentProperties>
+    <mso:_dlc_DocId msdt:dt="string">ADMIN-1645029823-64</mso:_dlc_DocId>
+    <mso:_dlc_DocIdItemGuid msdt:dt="string">3214b516-a77a-474f-82af-cfe17dc16435</mso:_dlc_DocIdItemGuid>
+    <mso:_dlc_DocIdUrl msdt:dt="string">https://adaptindia.sharepoint.com/sites/Titan_2_2_1_DEV/_layouts/15/DocIdRedir.aspx?ID=ADMIN-1645029823-64, ADMIN-1645029823-64</mso:_dlc_DocIdUrl>
+    <mso:Approval_x0020_Level msdt:dt="string"></mso:Approval_x0020_Level>
+    <mso:Categories msdt:dt="string"></mso:Categories>
+    <mso:Assigned_x0020_To msdt:dt="string"></mso:Assigned_x0020_To>
+    <mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Mona Gupta</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+    <mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Rakesh Khambra</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+    <mso:MediaServiceImageTags msdt:dt="string"></mso:MediaServiceImageTags>
+<mso:lcf76f155ced4ddcb4097134ff3c332f msdt:dt="string"></mso:lcf76f155ced4ddcb4097134ff3c332f>
+<mso:TaxCatchAll msdt:dt="string"></mso:TaxCatchAll>
+</mso:CustomDocumentProperties>
+    </xml><![endif]-->
+    <title></title>
+</head>
